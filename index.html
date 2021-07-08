@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What did you type?</title>
+
+    <style>
+        body {
+            font-family: monospace;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="holder">
+        <h1>
+            Words / Sentence Guesser (Type the sentences and I will guess what you wrote.)  
+        </h1>
+        <br>
+        <input type="text" id="userInput" placeholder="Type something here">
+        <br>    
+        <br>
+        <button id="submitter" type="button">Click to guess</button>
+        <br>
+        <br>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        var button = document.getElementById('submitter');
+
+        var onClick = function() {
+            var name = document.getElementById('userInput');
+            var  msg = document.getElementById('message');
+            msg.textContent = 'You typed: ' + name.value;
+        }
+
+        button.addEventListener('click', onClick);
+    </script>
+</body>
+</html>
